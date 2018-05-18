@@ -21,6 +21,8 @@ class DataHolder: NSObject {
     
     var storageRef:StorageReference?
     
+    var myProfile:Perfil = Perfil();
+    
     func initFireBase() {
         
         FirebaseApp.configure()
@@ -33,7 +35,56 @@ class DataHolder: NSObject {
         
     }
     
-    
+    func regitro(delegate:DataHolderDelegate, txtFieldEmail:String, txtFieldPssw:String, edad:Int, txtFieldUser:String, gender:String) {
+        var allNice:Bool = false
+        
+        Auth.auth().createUser(withEmail: (txtFieldEmail), password: (txtFieldPssw)) { (user, error) in
+            
+            if error == nil{
+                
+                DataHolder.sharedInstance.myProfile.iEdad = edad
+                DataHolder.sharedInstance.myProfile.sNombreUsuario = txtFieldUser
+                DataHolder.sharedInstance.myProfile.sGender = gender
+                DataHolder.sharedInstance.myProfile.userID = user?.uid
+                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!).setData(DataHolder.sharedInstance.myProfile.getMap()) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(String(describing: user?.uid))")
+                    }
+                }
+                
+                
+                if user != nil {
+                    
+                    allNice = true
+                    
+                    let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!)
+                    refPerfil?.getDocument(completion: { (document, errordoc) in
+                        if document != nil {
+                            
+                            DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                            print(DataHolder.sharedInstance.miPerfil.sNombreUsuario!, DataHolder.sharedInstance.miPerfil.iEdad!, DataHolder.sharedInstance.miPerfil.sCoche! )
+                            delegate.DHDregistro(allnice: allNice)
+                            
+                        }else{
+                            print(error!)
+                        }
+                    })
+                    
+                } else{
+                    print(error!)
+                }
+                
+                
+                
+                
+            }
+            else {
+                print("Error! ", error!)
+            }
+        }
+    }
     
 
 }

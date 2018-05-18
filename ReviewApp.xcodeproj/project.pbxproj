@@ -10,6 +10,9 @@
 		56C9E013748C282EA23BDBD6 /* Pods_ReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */; };
 		AA7E9BE920AEBAEB00ED1538 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */; };
 		AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */; };
+		AA7E9BED20AEBF0000ED1538 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */; };
+		AA7E9BEF20AEBFD000ED1538 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEE20AEBFD000ED1538 /* Review.swift */; };
+		AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */; };
 		AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC236A20AE303D00A7A569 /* AppDelegate.swift */; };
 		AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC236C20AE303D00A7A569 /* ViewController.swift */; };
 		AAEC237020AE303D00A7A569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEC236E20AE303D00A7A569 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 		8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
+		AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
+		AA7E9BEE20AEBFD000ED1538 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
 		AAEC236720AE303D00A7A569 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEC236A20AE303D00A7A569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEC236C20AE303D00A7A569 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,9 @@
 				AAEC237620AE303D00A7A569 /* Info.plist */,
 				AAEC237C20AE36E400A7A569 /* DataHolder.swift */,
 				AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */,
+				AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */,
+				AA7E9BEE20AEBFD000ED1538 /* Review.swift */,
+				AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -229,10 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7E9BED20AEBF0000ED1538 /* Perfil.swift in Sources */,
 				AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */,
+				AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */,
 				AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */,
 				AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */,
 				AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */,
+				AA7E9BEF20AEBFD000ED1538 /* Review.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
