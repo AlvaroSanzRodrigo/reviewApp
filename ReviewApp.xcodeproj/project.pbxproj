@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		56C9E013748C282EA23BDBD6 /* Pods_ReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */; };
+		AA7E9BE920AEBAEB00ED1538 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */; };
+		AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */; };
 		AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC236A20AE303D00A7A569 /* AppDelegate.swift */; };
 		AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC236C20AE303D00A7A569 /* ViewController.swift */; };
 		AAEC237020AE303D00A7A569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEC236E20AE303D00A7A569 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
 		AAEC236720AE303D00A7A569 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEC236A20AE303D00A7A569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEC236C20AE303D00A7A569 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		AAEC236920AE303D00A7A569 /* ReviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */,
 				AAEC236A20AE303D00A7A569 /* AppDelegate.swift */,
 				AAEC236C20AE303D00A7A569 /* ViewController.swift */,
 				AAEC236E20AE303D00A7A569 /* Main.storyboard */,
@@ -87,6 +92,7 @@
 				AAEC237320AE303D00A7A569 /* LaunchScreen.storyboard */,
 				AAEC237620AE303D00A7A569 /* Info.plist */,
 				AAEC237C20AE36E400A7A569 /* DataHolder.swift */,
+				AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAEC237520AE303D00A7A569 /* LaunchScreen.storyboard in Resources */,
+				AA7E9BE920AEBAEB00ED1538 /* GoogleService-Info.plist in Resources */,
 				AAEC237220AE303D00A7A569 /* Assets.xcassets in Resources */,
 				AAEC237020AE303D00A7A569 /* Main.storyboard in Resources */,
 			);
@@ -224,6 +231,7 @@
 			files = (
 				AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */,
 				AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */,
+				AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */,
 				AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +374,7 @@
 				DEVELOPMENT_TEAM = 86CZ52Y2CQ;
 				INFOPLIST_FILE = ReviewApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Sanzcorp.ReviewApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GebulotSL.ReviewApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,7 +390,7 @@
 				DEVELOPMENT_TEAM = 86CZ52Y2CQ;
 				INFOPLIST_FILE = ReviewApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Sanzcorp.ReviewApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GebulotSL.ReviewApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

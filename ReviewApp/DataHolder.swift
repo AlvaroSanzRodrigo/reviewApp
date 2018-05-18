@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 class DataHolder: NSObject {
     
     static let sharedInstance = DataHolder();
     
     var hello : String = "hola"
+    
+    var fireStoreDB:Firestore?
+    
+    var storage:Storage?
+    
+    var storageRef:StorageReference?
+    
+    func initFireBase() {
+        
+        FirebaseApp.configure()
+        
+        fireStoreDB = Firestore.firestore()
+        
+        storage = Storage.storage()
+        
+        storageRef = storage?.reference()
+        
+    }
     
     
     
