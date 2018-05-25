@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class VCRegister: UIViewController {
 
@@ -26,7 +27,9 @@ class VCRegister: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func okRegister(_ sender: Any) {
+        DataHolder.sharedInstance.regitro(txtFieldEmail: txtfEmailRg.text!, txtFieldPssw: txtfpass2.text!, edad: Timestamp(date: DatePickerbirthday.date), txtFieldUser: "", gender: txtfGender.text!)
     }
+    
     
 
 

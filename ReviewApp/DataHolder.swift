@@ -35,7 +35,7 @@ class DataHolder: NSObject {
         
     }
     
-    func regitro(delegate:DataHolderDelegate, txtFieldEmail:String, txtFieldPssw:String, edad:Int, txtFieldUser:String, gender:String) {
+    func regitro(txtFieldEmail:String, txtFieldPssw:String, edad:Timestamp, txtFieldUser:String, gender:String) {
         var allNice:Bool = false
         
         Auth.auth().createUser(withEmail: (txtFieldEmail), password: (txtFieldPssw)) { (user, error) in
@@ -64,7 +64,6 @@ class DataHolder: NSObject {
                         if document != nil {
                             
                             DataHolder.sharedInstance.myProfile.setMap(valores: (document?.data())!, user: (user?.uid)!)
-                            delegate.DHDregistro(allnice: allNice)
                             
                         }else{
                             print(error!)

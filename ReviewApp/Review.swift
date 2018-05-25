@@ -9,5 +9,23 @@
 import UIKit
 
 class Review: NSObject {
-
+    
+    var images: [String] = []
+    
+    var title: String?
+    
+    var pros: [String]
+    
+    var cons: [String]
+    
+    var linkCompra: String?
+    
+    var userID: String?
+    
+    var descripcion: String
+    
+    var score: Double
+    
+    
+    
 }

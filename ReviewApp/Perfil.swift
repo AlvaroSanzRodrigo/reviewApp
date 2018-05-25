@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class Perfil: NSObject {
     
-    var iEdad:Int?
+    var iEdad:Timestamp?
     
     var sNombreUsuario:String?
     
@@ -22,7 +23,7 @@ class Perfil: NSObject {
     
     func setMap(valores:[String:Any], user:String){
         
-        iEdad = valores["edad"] as? Int
+        iEdad = valores["edad"] as? Timestamp
         
         sNombreUsuario = valores["user"] as? String
         
