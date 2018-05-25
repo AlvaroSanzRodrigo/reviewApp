@@ -63,8 +63,7 @@ class DataHolder: NSObject {
                     refPerfil?.getDocument(completion: { (document, errordoc) in
                         if document != nil {
                             
-                            DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
-                            print(DataHolder.sharedInstance.miPerfil.sNombreUsuario!, DataHolder.sharedInstance.miPerfil.iEdad!, DataHolder.sharedInstance.miPerfil.sCoche! )
+                            DataHolder.sharedInstance.myProfile.setMap(valores: (document?.data())!, user: (user?.uid)!)
                             delegate.DHDregistro(allnice: allNice)
                             
                         }else{
