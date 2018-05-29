@@ -35,7 +35,9 @@ class DataHolder: NSObject {
         
     }
     
+
     func regitro(txtFieldEmail:String, txtFieldPssw:String, edad:Timestamp, txtFieldUser:String, gender:String) {
+
         var allNice:Bool = false
         
         Auth.auth().createUser(withEmail: (txtFieldEmail), password: (txtFieldPssw)) { (user, error) in

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56C9E013748C282EA23BDBD6 /* Pods_ReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */; };
+		73D65E3420B7FE5C0026CD48 /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D65E3320B7FE5C0026CD48 /* VCMenu.swift */; };
 		AA7E9BE920AEBAEB00ED1538 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */; };
 		AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */; };
 		AA7E9BED20AEBF0000ED1538 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73D65E3320B7FE5C0026CD48 /* VCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMenu.swift; sourceTree = "<group>"; };
 		8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AA7E9BEA20AEBB7D00ED1538 /* VCLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */,
 				AA7E9BEE20AEBFD000ED1538 /* Review.swift */,
 				AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */,
+				73D65E3320B7FE5C0026CD48 /* VCMenu.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */,
 				AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */,
 				AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */,
+				73D65E3420B7FE5C0026CD48 /* VCMenu.swift in Sources */,
 				AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */,
 				AA7E9BEF20AEBFD000ED1538 /* Review.swift in Sources */,
 			);
@@ -383,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86CZ52Y2CQ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ReviewApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GebulotSL.ReviewApp;
@@ -399,7 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86CZ52Y2CQ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ReviewApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GebulotSL.ReviewApp;
