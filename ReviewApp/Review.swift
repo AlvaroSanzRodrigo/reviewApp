@@ -14,17 +14,17 @@ class Review: NSObject {
     
     var title: String?
     
-    var pros: [String]
+    var pros: [String] = []
     
-    var cons: [String]
+    var cons: [String] = []
     
     var linkCompra: String?
     
     var userID: String?
     
-    var descripcion: String
+    var descripcion: String?
     
-    var score: Double
+    var score: Double?
     
     
     
