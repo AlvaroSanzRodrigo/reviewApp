@@ -17,11 +17,10 @@ class VCMenu: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         frmMenuDesaparecer = vistaMenu?.frame
         frmMenuaparecer = vistaMenu?.frame
         frmMenuaparecer?.origin.x = 0
-        
+        vistaMenu?.isHidden = false
         
         // Do any additional setup after loading the view.
     }
@@ -32,19 +31,28 @@ class VCMenu: UIViewController {
     }
     
     @IBAction func accionBotonMenu(){
-        UIView.animate(withDuration: 2, delay: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+        print("-----------------> Funciona el boton")
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
             
             self.vistaMenu?.frame = self.frmMenuaparecer!
             
             
         }, completion: {(finished)-> Void in
-            
+            print("acabe anim")
         })
         
     }
     
     @IBAction func accionBotonCerrar(){
         
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+            
+            self.vistaMenu?.frame = self.frmMenuDesaparecer!
+            
+            
+        }, completion: {(finished)-> Void in
+            
+        })
         
     }
     
