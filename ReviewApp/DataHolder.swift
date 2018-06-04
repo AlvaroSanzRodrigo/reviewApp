@@ -47,12 +47,12 @@ class DataHolder: NSObject {
                 DataHolder.sharedInstance.myProfile.iEdad = edad
                 DataHolder.sharedInstance.myProfile.sNombreUsuario = txtFieldUser
                 DataHolder.sharedInstance.myProfile.sGender = gender
-                DataHolder.sharedInstance.myProfile.userID = user?.uid
-                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!).setData(DataHolder.sharedInstance.myProfile.getMap()) { err in
+                DataHolder.sharedInstance.myProfile.userID = user?.additionalUserInfo?.providerID
+                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.user.uid)!).setData(DataHolder.sharedInstance.myProfile.getMap()) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {
-                        print("Document added with ID: \(String(describing: user?.uid))")
+                        print("Document added with ID: \(String(describing: user?.user.uid))")
                     }
                 }
                 
@@ -61,11 +61,11 @@ class DataHolder: NSObject {
                     
                     allNice = true
                     
-                    let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.uid)!)
+                    let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.user.uid)!)
                     refPerfil?.getDocument(completion: { (document, errordoc) in
                         if document != nil {
                             
-                            DataHolder.sharedInstance.myProfile.setMap(valores: (document?.data())!, user: (user?.uid)!)
+                            DataHolder.sharedInstance.myProfile.setMap(valores: (document?.data())!, user: (user?.user.uid)!)
                             
                         }else{
                             print(error!)

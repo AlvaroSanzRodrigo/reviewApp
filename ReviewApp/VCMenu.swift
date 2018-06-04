@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class VCMenu: UIViewController {
     
     @IBOutlet var vistaMenu:UIView?
+    
+    @IBOutlet weak var btnMenu: UIButton!
+    @IBOutlet weak var btnVolver: UIButton!
+    @IBOutlet weak var btnConfig: UIButton!
+    @IBOutlet weak var btnAyuda: UIButton!
+    @IBOutlet weak var btnSubirRev: UIButton!
     
     var frmMenuaparecer:CGRect?
     var frmMenuDesaparecer:CGRect?
@@ -21,7 +28,26 @@ class VCMenu: UIViewController {
         frmMenuaparecer = vistaMenu?.frame
         frmMenuaparecer?.origin.x = 0
         vistaMenu?.isHidden = false
+        //btn volver
+        btnVolver.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
+        btnVolver.setTitle(String.fontAwesomeIcon(name: .angleLeft), for: .normal)
+        //btn subirPerfil
+        btnSubirRev.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
+        btnSubirRev.setTitle(String.fontAwesomeIcon(name: .upload) + "   Subir review", for: .normal)
         
+        
+        //btn Configuracion
+        btnConfig.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
+        btnConfig.setTitle(String.fontAwesomeIcon(name: .gear) + "   Configuración",
+                           for: .normal)
+        //btn menu
+        btnMenu.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
+        btnMenu.setTitle(String.fontAwesomeIcon(name: .bars),
+                           for: .normal)
+        //btn ayuda
+        btnAyuda.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
+        btnAyuda.setTitle(String.fontAwesomeIcon(name: .info) + "   Ayuda",
+                         for: .normal)
         // Do any additional setup after loading the view.
     }
 

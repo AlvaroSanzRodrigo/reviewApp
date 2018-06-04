@@ -12,7 +12,11 @@ class Review: NSObject {
     
     var images: [String] = []
     
-    var title: String?
+    var producto: String?
+    
+    var marca: String?
+    
+    var categoria: String?
     
     var pros: [String] = []
     
@@ -25,6 +29,8 @@ class Review: NSObject {
     var descripcion: String?
     
     var score: Double?
+    
+    
     
     
     
