@@ -11,86 +11,84 @@ import FontAwesome_swift
 
 class VCMenu: UIViewController {
     
-    @IBOutlet var vistaMenu:UIView?
+    @IBOutlet weak var SideView: UIView?
     
-    @IBOutlet weak var btnMenu: UIButton!
-    @IBOutlet weak var btnVolver: UIButton!
-    @IBOutlet weak var btnConfig: UIButton!
-    @IBOutlet weak var btnAyuda: UIButton!
-    @IBOutlet weak var btnSubirRev: UIButton!
+    @IBOutlet weak var BlurView: UIVisualEffectView?
+   
+    @IBOutlet weak var ViewConstrait: NSLayoutConstraint!
     
-    var frmMenuaparecer:CGRect?
-    var frmMenuDesaparecer:CGRect?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        frmMenuDesaparecer = vistaMenu?.frame
-        frmMenuaparecer = vistaMenu?.frame
-        frmMenuaparecer?.origin.x = 0
-        vistaMenu?.isHidden = false
-        //btn volver
-        btnVolver.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
-        btnVolver.setTitle(String.fontAwesomeIcon(name: .angleLeft), for: .normal)
-        //btn subirPerfil
-        btnSubirRev.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
-        btnSubirRev.setTitle(String.fontAwesomeIcon(name: .upload) + "   Subir review", for: .normal)
+        
+        BlurView?.layer.cornerRadius = 5
+        SideView?.layer.shadowColor = UIColor.black.cgColor
+        SideView?.layer.shadowOpacity = 0.8
+        SideView?.layer.shadowOffset = CGSize (width: 5, height: 0 )
+        ViewConstrait.constant = -151
         
         
-        //btn Configuracion
-        btnConfig.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
-        btnConfig.setTitle(String.fontAwesomeIcon(name: .gear) + "   Configuración",
-                           for: .normal)
-        //btn menu
-        btnMenu.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
-        btnMenu.setTitle(String.fontAwesomeIcon(name: .bars),
-                           for: .normal)
-        //btn ayuda
-        btnAyuda.titleLabel?.font = UIFont.fontAwesome(ofSize: 15)
-        btnAyuda.setTitle(String.fontAwesomeIcon(name: .info) + "   Ayuda",
-                         for: .normal)
-        // Do any additional setup after loading the view.
     }
+    
 
+    @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
+
+        
+        if sender.state == .began || sender.state == .changed {
+            
+            let translation = sender.translation(in: self.view).x
+            
+            print(translation)
+            
+            if ViewConstrait.constant < 10 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    
+                    self.ViewConstrait.constant += translation / 10
+                    self.view.layoutIfNeeded()
+                })
+                
+                
+            }else{
+                
+                if ViewConstrait.constant > -151 {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        
+                        self.ViewConstrait.constant += translation / 10
+                        self.view.layoutIfNeeded()
+                    })
+                
+                
+            }
+            }
+            
+        } else if sender.state == .ended{
+            
+            if ViewConstrait.constant < -151 {
+                
+                UIView.animate(withDuration: 0.2, animations: {
+                    
+                    self.ViewConstrait.constant = -151
+                    self.view.layoutIfNeeded()
+                })
+                
+            }else{
+                
+                UIView.animate(withDuration: 0.2, animations: {
+                    
+                    self.ViewConstrait.constant = 0
+                    self.view.layoutIfNeeded()
+                })
+                
+                
+            }
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func accionBotonMenu(){
-        print("-----------------> Funciona el boton")
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
-            
-            self.vistaMenu?.frame = self.frmMenuaparecer!
-            
-            
-        }, completion: {(finished)-> Void in
-            print("acabe anim")
-        })
-        
-    }
-    
-    @IBAction func accionBotonCerrar(){
-        
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
-            
-            self.vistaMenu?.frame = self.frmMenuDesaparecer!
-            
-            
-        }, completion: {(finished)-> Void in
-            
-        })
-        
-    }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
