@@ -151,6 +151,152 @@
             </objects>
             <point key="canvasLocation" x="1820" y="253.2233883058471"/>
         </scene>
+        <!--Cuplad Review-->
+        <scene sceneID="Fid-uG-llj">
+            <objects>
+                <viewController storyboardIdentifier="subirReview1" id="RGm-7L-7eQ" customClass="VCupladReview" customModule="ReviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSv-lj-PNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="marca" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="udi-7J-hhh">
+                                <rect key="frame" x="139" y="195" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descripcion" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OqJ-5x-YL2">
+                                <rect key="frame" x="91" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="producto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j4s-GT-RRC">
+                                <rect key="frame" x="139" y="119" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XCf-a6-v1w"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtAreaDescripcion" destination="OqJ-5x-YL2" id="uWX-dC-iiI"/>
+                        <outlet property="txtMarca" destination="udi-7J-hhh" id="aQX-dM-ZO7"/>
+                        <outlet property="txtProducto" destination="j4s-GT-RRC" id="lRa-BS-6PL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNO-zi-ozt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4289" y="7"/>
+        </scene>
+        <!--Cuplad Review-->
+        <scene sceneID="Srr-IF-L7A">
+            <objects>
+                <viewController storyboardIdentifier="subirReview2" id="gBE-iu-WqY" customClass="VCupladReview" customModule="ReviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sGs-vJ-iLu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pros" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahR-iZ-vek">
+                                <rect key="frame" x="102" y="87" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contras" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioD-HY-yi5">
+                                <rect key="frame" x="102" y="154" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="link de compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-lV-OOK">
+                                <rect key="frame" x="102" y="212" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-uI-EJx">
+                                <rect key="frame" x="268" y="87" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="btnProsAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="MsF-H7-iPa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4U-Cf-xte">
+                                <rect key="frame" x="268" y="154" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="btnConsAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="xhd-kO-qMH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0x-yP-tRB">
+                                <rect key="frame" x="72" y="282" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="camara"/>
+                                <connections>
+                                    <action selector="btnCamaraAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="MMv-bZ-iun"/>
+                                    <action selector="btnProsAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="aVz-lU-hY3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgh-ST-XHl">
+                                <rect key="frame" x="261" y="282" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="galeria"/>
+                                <connections>
+                                    <action selector="btnGaleriaAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="XfN-ze-NO8"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-do-xJ2">
+                                <rect key="frame" x="128" y="424" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-5d-zas">
+                                <rect key="frame" x="160" y="521" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Aceptar"/>
+                                <connections>
+                                    <action selector="btnAceptarAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="ax9-gl-g9B"/>
+                                    <action selector="btnGaleriaAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="aya-5e-mDI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tCi-6W-2XY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCamara" destination="x0x-yP-tRB" id="SP8-O8-y7x"/>
+                        <outlet property="btnContras" destination="a4U-Cf-xte" id="HMW-RK-QOv"/>
+                        <outlet property="btnGaleria" destination="Rgh-ST-XHl" id="TOS-vt-LVY"/>
+                        <outlet property="btnGaleriaAccion" destination="Rgh-ST-XHl" id="b4W-oD-XFw"/>
+                        <outlet property="btnPros" destination="gTY-uI-EJx" id="hyu-qT-vtS"/>
+                        <outlet property="sldScore" destination="Oe8-do-xJ2" id="ozQ-oK-ltZ"/>
+                        <outlet property="txtContras" destination="ioD-HY-yi5" id="wsV-D7-96B"/>
+                        <outlet property="txtLinkCompra" destination="4Wx-lV-OOK" id="YTf-O6-ag4"/>
+                        <outlet property="txtPros" destination="ahR-iZ-vek" id="uMv-p4-ySh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeF-cG-ckX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2824.8000000000002" y="-37.331334332833585"/>
+        </scene>
+        <!--Csubir Review View Controller-->
+        <scene sceneID="oML-7S-TBo">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="nHq-5v-dbp" customClass="VCsubirReviewViewController" customModule="ReviewApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXJ-3X-76Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3561" y="170"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SNR-ng-sn0">
             <objects>
