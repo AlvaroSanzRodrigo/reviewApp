@@ -28,11 +28,58 @@ class Review: NSObject {
     
     var descripcion: String?
     
-    var score: Double?
+    var score: Float?
     
     
+    func setMap(valores:[String:Any], user:String){
+        
+        images = valores["images"] as! [String]
+        
+        producto = valores["producto"] as? String
+        
+        marca = valores["marca"] as? String
+        
+        categoria = valores["categoria"] as? String
+        
+        pros = valores["pros"] as! [String]
+        
+        cons = valores["cons"] as! [String]
+        
+        linkCompra = valores["linkcompra"] as? String
+        
+        userID = valores["user"] as? String
+        
+        descripcion = valores["descripcion"] as? String
+        
+        score = valores["score"] as? Float
+        
+    }
     
-    
-    
-    
+     func getMap() -> [String:Any] {
+        var valores:[String:Any] = [:]
+        
+        valores["images"] = images
+        
+        valores["producto"] = producto
+        
+        valores["marca"] = marca
+        
+        valores["categoria"] = categoria
+        
+        valores["pros"] = pros
+        
+        valores["cons"] = cons
+        
+        valores["linkcompra"] = linkCompra
+        
+        valores["user"] = userID
+        
+        valores["descripcion"] = descripcion
+        
+        valores["score"] = score
+        
+        return valores
+        
+    }
+
 }
