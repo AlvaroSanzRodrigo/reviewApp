@@ -11,9 +11,9 @@ import Firebase
 
 class VCupladReview: UIViewController {
 
-    @IBOutlet weak var txtProducto: UITextField?
-    @IBOutlet weak var txtMarca: UITextField?
-    @IBOutlet weak var txtAreaDescripcion: UITextView?
+    @IBOutlet weak var txtProducto: UITextField!
+    @IBOutlet weak var txtMarca: UITextField!
+    @IBOutlet weak var txtAreaDescripcion: UITextView!
     @IBOutlet weak var txtPros: UITextField?
     @IBOutlet weak var btnPros: UIButton!
     @IBOutlet weak var txtContras: UITextField?
@@ -50,9 +50,9 @@ class VCupladReview: UIViewController {
     @IBAction func btnGaleriaAccion(_ sender: Any) {
     }
     @IBAction func btnAceptarAccion(_ sender: Any) {
-        print(txtProducto?.text)
-        reviewToUpload.producto = txtProducto?.text
-        reviewToUpload.marca = txtMarca?.text
+        
+        reviewToUpload.producto = txtProducto?.text!
+        reviewToUpload.marca = txtMarca?.text!
         reviewToUpload.categoria = "aun no puedes poner categorias"
         reviewToUpload.cons = cons
         reviewToUpload.pros = pros
