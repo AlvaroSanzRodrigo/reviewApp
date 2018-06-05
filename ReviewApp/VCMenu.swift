@@ -39,10 +39,10 @@ class VCMenu: UIViewController {
             
             print(translation)
             
-            if ViewConstrait.constant < 10 {
-                UIView.animate(withDuration: 0.2, animations: {
+            if ViewConstrait.constant < 25 {
+                UIView.animate(withDuration: 0.3, animations: {
                     
-                    self.ViewConstrait.constant += translation / 10
+                    self.ViewConstrait.constant += translation / 2
                     self.view.layoutIfNeeded()
                 })
                 
@@ -50,9 +50,9 @@ class VCMenu: UIViewController {
             }else{
                 
                 if ViewConstrait.constant > -151 {
-                    UIView.animate(withDuration: 0.2, animations: {
+                    UIView.animate(withDuration: 0.3, animations: {
                         
-                        self.ViewConstrait.constant += translation / 10
+                        self.ViewConstrait.constant += translation / 2
                         self.view.layoutIfNeeded()
                     })
                 
@@ -64,7 +64,7 @@ class VCMenu: UIViewController {
             
             if ViewConstrait.constant < -151 {
                 
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     
                     self.ViewConstrait.constant = -151
                     self.view.layoutIfNeeded()
@@ -72,7 +72,7 @@ class VCMenu: UIViewController {
                 
             }else{
                 
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     
                     self.ViewConstrait.constant = 0
                     self.view.layoutIfNeeded()
