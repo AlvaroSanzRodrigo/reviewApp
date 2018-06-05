@@ -50,17 +50,18 @@ class VCupladReview: UIViewController {
     @IBAction func btnGaleriaAccion(_ sender: Any) {
     }
     @IBAction func btnAceptarAccion(_ sender: Any) {
-        reviewToUpload.producto = txtProducto?.text!
-        reviewToUpload.marca = txtMarca?.text!
+        print(txtProducto?.text)
+        reviewToUpload.producto = txtProducto?.text
+        reviewToUpload.marca = txtMarca?.text
         reviewToUpload.categoria = "aun no puedes poner categorias"
         reviewToUpload.cons = cons
         reviewToUpload.pros = pros
-        reviewToUpload.linkCompra = txtLinkCompra?.text!
-        reviewToUpload.descripcion = txtAreaDescripcion?.text!
+        reviewToUpload.linkCompra = txtLinkCompra?.text
+        reviewToUpload.descripcion = "nono " //txtAreaDescripcion?.text!
         reviewToUpload.images.append("aun no puedes subir imagenes")
-        reviewToUpload.userID = "9pczQSlKHyuupuxnvyGD" //DataHolder.sharedInstance.myProfile.userID
+        reviewToUpload.userID = "k99EH92bnbS62LdWYR8P" //DataHolder.sharedInstance.myProfile.userID
         reviewToUpload.score = sldScore.value
-        DataHolder.sharedInstance.myProfile.asReviews.append(<#T##newElement: String##String#>)
+        
         print(reviewToUpload.getMap())
         let reviewDBRef = DataHolder.sharedInstance.fireStoreDB?.collection("reviews").document()
         //DataHolder.sharedInstance.fireStoreDB?.collection("reviews").
@@ -69,7 +70,8 @@ class VCupladReview: UIViewController {
                 print("Error writing document: \(err)")
             } else {
                 print("Document successfully written!")
-                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document(self.reviewToUpload.userID!).setData(["reviews"]:[reviewDBRef?.documentID as Any] as Any], merge: true)
+                DataHolder.sharedInstance.myProfile.asReviews.append((reviewDBRef?.documentID)!)
+                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document(self.reviewToUpload.userID!).setData(DataHolder.sharedInstance.myProfile.getMap(), merge: true)
             }
         }
     }
