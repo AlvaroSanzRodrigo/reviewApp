@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class VCupladReview: UIViewController {
 
@@ -57,9 +58,20 @@ class VCupladReview: UIViewController {
         reviewToUpload.linkCompra = txtLinkCompra?.text!
         reviewToUpload.descripcion = txtAreaDescripcion?.text!
         reviewToUpload.images.append("aun no puedes subir imagenes")
-        reviewToUpload.userID = DataHolder.sharedInstance.myProfile.userID
+        reviewToUpload.userID = "9pczQSlKHyuupuxnvyGD" //DataHolder.sharedInstance.myProfile.userID
         reviewToUpload.score = sldScore.value
+        DataHolder.sharedInstance.myProfile.asReviews.append(<#T##newElement: String##String#>)
         print(reviewToUpload.getMap())
+        let reviewDBRef = DataHolder.sharedInstance.fireStoreDB?.collection("reviews").document()
+        //DataHolder.sharedInstance.fireStoreDB?.collection("reviews").
+         reviewDBRef?.setData(reviewToUpload.getMap()){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+                DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document(self.reviewToUpload.userID!).setData(["reviews"]:[reviewDBRef?.documentID as Any] as Any], merge: true)
+            }
+        }
     }
     
     override func viewDidLoad() {

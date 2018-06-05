@@ -17,7 +17,7 @@ class Perfil: NSObject {
     
     var sGender:String?
     
-    var asReviews:[Review] = []
+    var asReviews:[String] = []
     
     var userID:String?
     
@@ -30,6 +30,8 @@ class Perfil: NSObject {
         sGender = valores["gender"] as? String
         
         userID = user
+        
+        asReviews = (valores["reviews"] as? [String])!
 
     }
     
@@ -42,6 +44,8 @@ class Perfil: NSObject {
         mapTemp["user"] = sNombreUsuario as Any
         
         mapTemp["gender"] = sGender as Any
+        
+        mapTemp["reviews"] = asReviews as Any
         
         return mapTemp
         
