@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 
-class VCupladReview: UIViewController {
-
+class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // Outlets de inputs de texto
     @IBOutlet weak var txtProducto: UITextField!
     @IBOutlet weak var txtMarca: UITextField!
     @IBOutlet weak var txtAreaDescripcion: UITextView!
@@ -22,6 +23,12 @@ class VCupladReview: UIViewController {
     @IBOutlet weak var btnCamara: UIButton!
     @IBOutlet weak var btnGaleria: UIButton!
     @IBOutlet weak var sldScore: UISlider!
+    @IBOutlet weak var borrarPro: UIButton!
+    @IBOutlet weak var borrarCon: UIButton!
+    @IBOutlet weak var lblScore: UILabel!
+    
+    @IBOutlet weak var prosvisualizer: UITextView!
+    @IBOutlet weak var consvisualizer: UITextView!
     
     var pros:[String] = []
     
@@ -33,17 +40,42 @@ class VCupladReview: UIViewController {
     @IBAction func btnProsAccion(_ sender: Any) {
         
         if (txtPros?.hasText)! {
+            prosvisualizer.text.append("\n- " + (txtPros?.text!)!)
             pros.append((txtPros?.text!)!)
             txtPros?.text = nil
             print(pros)
         }
     }
+    @IBAction func borrarProsAccion(_ sender: Any) {
+        if !pros.isEmpty {
+            pros.popLast()
+            prosvisualizer.text.removeAll()
+            for pro in pros{
+                prosvisualizer.text.append("\n- " + pro)
+            }
+        }
+    }
     @IBAction func btnConsAccion(_ sender: Any) {
         if (txtContras?.hasText)! {
+            consvisualizer.text.append("\n- " + (txtContras?.text!)!)
             cons.append((txtContras?.text!)!)
             txtContras?.text = nil
             print(cons)
         }
+    }
+    @IBAction func borrarConAccion(_ sender: Any) {
+        if !cons.isEmpty {
+            cons.popLast()
+            consvisualizer.text.removeAll()
+            for con in cons{
+                consvisualizer.text.append("\n- " + con)
+            }
+        }
+    }
+    
+    
+    @IBAction func sldShowScore(_ sender: Any) {
+        lblScore.text = String(Int.init(sldScore.value))
     }
     @IBAction func btnCamaraAccion(_ sender: Any) {
     }

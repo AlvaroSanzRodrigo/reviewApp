@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="asN-wH-5t4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nHq-5v-dbp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -204,44 +203,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pros" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahR-iZ-vek">
-                                <rect key="frame" x="102" y="87" width="134" height="30"/>
+                                <rect key="frame" x="31" y="249" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contras" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioD-HY-yi5">
-                                <rect key="frame" x="102" y="154" width="134" height="30"/>
+                                <rect key="frame" x="194" y="248" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="link de compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-lV-OOK">
-                                <rect key="frame" x="102" y="212" width="134" height="30"/>
+                                <rect key="frame" x="206" y="589" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-uI-EJx">
-                                <rect key="frame" x="268" y="87" width="30" height="30"/>
+                                <rect key="frame" x="61" y="283" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="btnProsAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="MsF-H7-iPa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7go-Bu-j5j">
+                                <rect key="frame" x="99" y="283" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="borrarProsAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="FRE-9v-Xe2"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4U-Cf-xte">
-                                <rect key="frame" x="268" y="154" width="30" height="30"/>
+                                <rect key="frame" x="232" y="283" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="btnConsAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="xhd-kO-qMH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXV-Id-4uo">
+                                <rect key="frame" x="270" y="283" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="borrarConAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="6nZ-EV-xfy"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0x-yP-tRB">
-                                <rect key="frame" x="72" y="282" width="51" height="30"/>
+                                <rect key="frame" x="73" y="318" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="camara"/>
                                 <connections>
@@ -250,7 +265,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgh-ST-XHl">
-                                <rect key="frame" x="261" y="282" width="46" height="30"/>
+                                <rect key="frame" x="262" y="318" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="galeria"/>
                                 <connections>
@@ -258,11 +273,14 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-do-xJ2">
-                                <rect key="frame" x="128" y="424" width="118" height="30"/>
+                                <rect key="frame" x="17" y="590" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sldShowScore:" destination="gBE-iu-WqY" eventType="valueChanged" id="ucJ-xT-I1J"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-5d-zas">
-                                <rect key="frame" x="160" y="521" width="54" height="30"/>
+                                <rect key="frame" x="305" y="617" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Aceptar"/>
                                 <connections>
@@ -270,16 +288,41 @@
                                     <action selector="btnGaleriaAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="aya-5e-mDI"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpN-Eh-I2K">
+                                <rect key="frame" x="11" y="86" width="131" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNZ-vt-FOk">
+                                <rect key="frame" x="196" y="86" width="131" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-y3-w8K">
+                                <rect key="frame" x="148" y="594" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tCi-6W-2XY"/>
                     </view>
                     <connections>
+                        <outlet property="borrarCon" destination="xXV-Id-4uo" id="3go-eX-5El"/>
+                        <outlet property="borrarPro" destination="7go-Bu-j5j" id="Mnd-gO-2S1"/>
                         <outlet property="btnCamara" destination="x0x-yP-tRB" id="SP8-O8-y7x"/>
                         <outlet property="btnContras" destination="a4U-Cf-xte" id="HMW-RK-QOv"/>
                         <outlet property="btnGaleria" destination="Rgh-ST-XHl" id="TOS-vt-LVY"/>
-                        <outlet property="btnGaleriaAccion" destination="Rgh-ST-XHl" id="b4W-oD-XFw"/>
                         <outlet property="btnPros" destination="gTY-uI-EJx" id="hyu-qT-vtS"/>
+                        <outlet property="consvisualizer" destination="jNZ-vt-FOk" id="Jqt-oE-p5E"/>
+                        <outlet property="lblScore" destination="mHv-y3-w8K" id="H03-W6-f68"/>
+                        <outlet property="prosvisualizer" destination="dpN-Eh-I2K" id="VYU-R8-OXO"/>
                         <outlet property="sldScore" destination="Oe8-do-xJ2" id="ozQ-oK-ltZ"/>
                         <outlet property="txtContras" destination="ioD-HY-yi5" id="wsV-D7-96B"/>
                         <outlet property="txtLinkCompra" destination="4Wx-lV-OOK" id="YTf-O6-ag4"/>
@@ -313,7 +356,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tY0-lg-ASz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="-37"/>
+            <point key="canvasLocation" x="1089" y="53"/>
         </scene>
         <!--Register-->
         <scene sceneID="c04-dC-KKc">
