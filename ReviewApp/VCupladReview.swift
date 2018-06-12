@@ -8,8 +8,12 @@
 
 import UIKit
 import Firebase
+import Toast_Swift
 
-class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
     
     // Outlets de inputs de texto
     @IBOutlet weak var txtProducto: UITextField!
@@ -26,15 +30,32 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var borrarPro: UIButton!
     @IBOutlet weak var borrarCon: UIButton!
     @IBOutlet weak var lblScore: UILabel!
+ 
     
     @IBOutlet weak var prosvisualizer: UITextView!
     @IBOutlet weak var consvisualizer: UITextView!
+    
+    @IBOutlet weak var pvCategoria: UIPickerView!
+    
     
     var pros:[String] = []
     
     var cons:[String] = []
     
+    var categorias:[String] = ["Hogar", "Electronica", "Jardin", "Salud y Estetica", "Moda", "Telefonía", "Deportes", "Motor", ]
+    
     var reviewToUpload:Review = Review()
+    
+    
+    
+    @IBAction func saveProductAccion(_ sender: Any) {
+        DataHolder.sharedInstance.sProducto = txtProducto.text!
+        
+    }
+    @IBAction func saveBrandAccion(_ sender: Any) {
+        DataHolder.sharedInstance.sMarca = txtMarca.text!
+    }
+   
     
     
     @IBAction func btnProsAccion(_ sender: Any) {
@@ -44,6 +65,7 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
             pros.append((txtPros?.text!)!)
             txtPros?.text = nil
             print(pros)
+            
         }
     }
     @IBAction func borrarProsAccion(_ sender: Any) {
@@ -82,17 +104,33 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBAction func btnGaleriaAccion(_ sender: Any) {
     }
     @IBAction func btnAceptarAccion(_ sender: Any) {
-        
-        reviewToUpload.producto = txtProducto?.text!
-        reviewToUpload.marca = txtMarca?.text!
-        reviewToUpload.categoria = "aun no puedes poner categorias"
+        if (DataHolder.sharedInstance.sProducto.isEmpty) {
+            self.view.makeToast("El producto está vacío")
+        }else {
+            
+            if(DataHolder.sharedInstance.sMarca?.isEmpty)!{
+                self.view.makeToast("La marca está vacía")
+            } else{
+            
+                if (DataHolder.sharedInstance.sDescripcion?.isEmpty)!{
+                    self.view.makeToast("La descripción está vacía")
+                }
+                
+                else{
+                    
+                    if (DataHolder.sharedInstance.sCategory?.isEmpty)! {
+                       self.view.makeToast("Seleccione una categoría")
+                    } else{
+        reviewToUpload.producto = DataHolder.sharedInstance.sProducto
+        reviewToUpload.marca = DataHolder.sharedInstance.sMarca!
+        reviewToUpload.categoria = DataHolder.sharedInstance.sCategory!
         reviewToUpload.cons = cons
         reviewToUpload.pros = pros
         reviewToUpload.linkCompra = txtLinkCompra?.text
-        reviewToUpload.descripcion = "nono " //txtAreaDescripcion?.text!
+        reviewToUpload.descripcion = DataHolder.sharedInstance.sDescripcion
         reviewToUpload.images.append("aun no puedes subir imagenes")
         reviewToUpload.userID = "k99EH92bnbS62LdWYR8P" //DataHolder.sharedInstance.myProfile.userID
-        reviewToUpload.score = sldScore.value
+        reviewToUpload.score = sldScore.value.rounded()
         
         print(reviewToUpload.getMap())
         let reviewDBRef = DataHolder.sharedInstance.fireStoreDB?.collection("reviews").document()
@@ -106,19 +144,37 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
                 DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document(self.reviewToUpload.userID!).setData(DataHolder.sharedInstance.myProfile.getMap(), merge: true)
             }
         }
-    }
+                    }}}}}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        pvCategoria.dataSource = self
+        pvCategoria.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // picker
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categorias.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categorias[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        DataHolder.sharedInstance.sDescripcion = txtAreaDescripcion.text
+        DataHolder.sharedInstance.sCategory = categorias[row]
+    }
 
   
 

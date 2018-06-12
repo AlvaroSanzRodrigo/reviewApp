@@ -16,6 +16,6 @@ target 'ReviewApp' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'FontAwesome.swift'
-  
+  pod 'Toast-Swift', '~> 3.0.1'
   
 end

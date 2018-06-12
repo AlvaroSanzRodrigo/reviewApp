@@ -36,6 +36,14 @@ class DataHolder: NSObject {
         
     }
     
+    //Se perfectamente que esto es trampa
+    
+    var sProducto:String = ""
+    var sMarca:String? = ""
+    var sDescripcion:String? = ""
+    var sCategory:String? = ""
+    
+    // yay
 
     func regitro(txtFieldEmail:String, txtFieldPssw:String, edad:Timestamp, txtFieldUser:String, gender:String) {
 
