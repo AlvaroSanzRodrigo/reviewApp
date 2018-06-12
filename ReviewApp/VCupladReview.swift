@@ -31,6 +31,7 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var borrarCon: UIButton!
     @IBOutlet weak var lblScore: UILabel!
  
+    @IBOutlet weak var btnMenu: UIButton!
     
     @IBOutlet weak var prosvisualizer: UITextView!
     @IBOutlet weak var consvisualizer: UITextView!
