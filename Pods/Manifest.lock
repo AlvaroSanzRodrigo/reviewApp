@@ -76,6 +76,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.6.0)
+  - SideMenu (4.0.0)
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
@@ -84,6 +85,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - FontAwesome.swift
+  - SideMenu
   - Toast-Swift (~> 3.0.1)
 
 SPEC CHECKSUMS:
@@ -105,8 +107,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
+  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 4e9802138b2d829e9331ac2d17032a39fbb94361
+PODFILE CHECKSUM: a25a6343f33890100f635adb34e254fa3db37b41
 
 COCOAPODS: 1.4.0

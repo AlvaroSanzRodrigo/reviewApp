@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		56C9E013748C282EA23BDBD6 /* Pods_ReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */; };
 		738DEAA220BD533000E1512B /* VCReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DEAA120BD533000E1512B /* VCReview.swift */; };
-		73D65E3420B7FE5C0026CD48 /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D65E3320B7FE5C0026CD48 /* VCMenu.swift */; };
 		AA0A629E20C672700046BD59 /* VCsubirReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A629D20C672700046BD59 /* VCsubirReviewViewController.swift */; };
 		AA0A62A020C676830046BD59 /* VCupladReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A629F20C676830046BD59 /* VCupladReview.swift */; };
 		AA7E9BE920AEBAEB00ED1538 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA7E9BE820AEBAEB00ED1538 /* GoogleService-Info.plist */; };
@@ -17,6 +16,8 @@
 		AA7E9BED20AEBF0000ED1538 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */; };
 		AA7E9BEF20AEBFD000ED1538 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BEE20AEBFD000ED1538 /* Review.swift */; };
 		AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */; };
+		AAD1411320CFD9D800BF83D6 /* CeldaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1411220CFD9D800BF83D6 /* CeldaMenu.swift */; };
+		AAD1411520CFDA5A00BF83D6 /* TVCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1411420CFDA5A00BF83D6 /* TVCMenu.swift */; };
 		AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC236A20AE303D00A7A569 /* AppDelegate.swift */; };
 		AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC236C20AE303D00A7A569 /* ViewController.swift */; };
 		AAEC237020AE303D00A7A569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEC236E20AE303D00A7A569 /* Main.storyboard */; };
@@ -27,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		738DEAA120BD533000E1512B /* VCReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCReview.swift; sourceTree = "<group>"; };
-		73D65E3320B7FE5C0026CD48 /* VCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMenu.swift; sourceTree = "<group>"; };
 		8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0A629D20C672700046BD59 /* VCsubirReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCsubirReviewViewController.swift; sourceTree = "<group>"; };
 		AA0A629F20C676830046BD59 /* VCupladReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCupladReview.swift; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		AA7E9BEE20AEBFD000ED1538 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
+		AAD1411220CFD9D800BF83D6 /* CeldaMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaMenu.swift; sourceTree = "<group>"; };
+		AAD1411420CFDA5A00BF83D6 /* TVCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMenu.swift; sourceTree = "<group>"; };
 		AAEC236720AE303D00A7A569 /* ReviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEC236A20AE303D00A7A569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEC236C20AE303D00A7A569 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +114,9 @@
 				AA7E9BEC20AEBF0000ED1538 /* Perfil.swift */,
 				AA7E9BEE20AEBFD000ED1538 /* Review.swift */,
 				AA7E9BF020AEC3CE00ED1538 /* VCRegister.swift */,
-				73D65E3320B7FE5C0026CD48 /* VCMenu.swift */,
 				738DEAA120BD533000E1512B /* VCReview.swift */,
+				AAD1411220CFD9D800BF83D6 /* CeldaMenu.swift */,
+				AAD1411420CFDA5A00BF83D6 /* TVCMenu.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -232,6 +236,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -272,12 +277,13 @@
 			files = (
 				AA7E9BED20AEBF0000ED1538 /* Perfil.swift in Sources */,
 				AA0A629E20C672700046BD59 /* VCsubirReviewViewController.swift in Sources */,
+				AAD1411520CFDA5A00BF83D6 /* TVCMenu.swift in Sources */,
 				AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */,
+				AAD1411320CFD9D800BF83D6 /* CeldaMenu.swift in Sources */,
 				AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */,
 				AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */,
 				AA0A62A020C676830046BD59 /* VCupladReview.swift in Sources */,
 				AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */,
-				73D65E3420B7FE5C0026CD48 /* VCMenu.swift in Sources */,
 				738DEAA220BD533000E1512B /* VCReview.swift in Sources */,
 				AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */,
 				AA7E9BEF20AEBFD000ED1538 /* Review.swift in Sources */,
