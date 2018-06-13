@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Toast_Swift
+import FontAwesome_swift
 
 
 class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -30,13 +31,18 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var borrarPro: UIButton!
     @IBOutlet weak var borrarCon: UIButton!
     @IBOutlet weak var lblScore: UILabel!
- 
     @IBOutlet weak var btnMenu: UIButton!
+    @IBAction func btnmenuAccion(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    
     
     @IBOutlet weak var prosvisualizer: UITextView!
     @IBOutlet weak var consvisualizer: UITextView!
     
     @IBOutlet weak var pvCategoria: UIPickerView!
+    
     
     
     var pros:[String] = []
@@ -148,6 +154,19 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
                     }}}}}
     
     override func viewDidLoad() {
+        //closeIcon
+        btnMenu.titleLabel?.font = UIFont.fontAwesome(ofSize: 25)
+        btnMenu.setTitle(String.fontAwesomeIcon(name: .timesCircle), for: .normal)
+        //pros icons
+        btnPros.titleLabel?.font = UIFont.fontAwesome(ofSize: 20)
+        btnPros.setTitle(String.fontAwesomeIcon(name: .plusCircle), for: .normal)
+        borrarPro.titleLabel?.font = UIFont.fontAwesome(ofSize: 20)
+        borrarPro.setTitle(String.fontAwesomeIcon(name: .minusCircle), for: .normal)
+        //cons icons
+        btnContras.titleLabel?.font = UIFont.fontAwesome(ofSize: 20)
+        btnContras.setTitle(String.fontAwesomeIcon(name: .plusCircle), for: .normal)
+        borrarCon.titleLabel?.font = UIFont.fontAwesome(ofSize: 20)
+        borrarCon.setTitle(String.fontAwesomeIcon(name: .minusCircle), for: .normal)
         super.viewDidLoad()
         pvCategoria.dataSource = self
         pvCategoria.delegate = self

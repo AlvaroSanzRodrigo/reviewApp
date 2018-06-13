@@ -24,6 +24,8 @@
 		AAEC237220AE303D00A7A569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEC237120AE303D00A7A569 /* Assets.xcassets */; };
 		AAEC237520AE303D00A7A569 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEC237320AE303D00A7A569 /* LaunchScreen.storyboard */; };
 		AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC237C20AE36E400A7A569 /* DataHolder.swift */; };
+		AAEE841220D129D50049719D /* VCAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE841120D129D50049719D /* VCAbout.swift */; };
+		AAEE841420D132D10049719D /* VCGitHubAlvaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE841320D132D10049719D /* VCGitHubAlvaro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		AAEC237420AE303D00A7A569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAEC237620AE303D00A7A569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAEC237C20AE36E400A7A569 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		AAEE841120D129D50049719D /* VCAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCAbout.swift; sourceTree = "<group>"; };
+		AAEE841320D132D10049719D /* VCGitHubAlvaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCGitHubAlvaro.swift; sourceTree = "<group>"; };
 		D91EC1AB484A56A422FB92AA /* Pods-ReviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewApp/Pods-ReviewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0CCA1F021D4D305B51BFA60 /* Pods-ReviewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewApp/Pods-ReviewApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,8 @@
 				738DEAA120BD533000E1512B /* VCReview.swift */,
 				AA775DC920D029E0007E37A6 /* TVCMenu.swift */,
 				AA775DCB20D030E6007E37A6 /* PruebamenuViewController.swift */,
+				AAEE841120D129D50049719D /* VCAbout.swift */,
+				AAEE841320D132D10049719D /* VCGitHubAlvaro.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -281,10 +287,12 @@
 				AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */,
 				AA775DCC20D030E6007E37A6 /* PruebamenuViewController.swift in Sources */,
 				AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */,
+				AAEE841420D132D10049719D /* VCGitHubAlvaro.swift in Sources */,
 				AA0A62A020C676830046BD59 /* VCupladReview.swift in Sources */,
 				AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */,
 				738DEAA220BD533000E1512B /* VCReview.swift in Sources */,
 				AA775DCA20D029E0007E37A6 /* TVCMenu.swift in Sources */,
+				AAEE841220D129D50049719D /* VCAbout.swift in Sources */,
 				AAEC236B20AE303D00A7A569 /* AppDelegate.swift in Sources */,
 				AA7E9BEF20AEBFD000ED1538 /* Review.swift in Sources */,
 			);

@@ -14,13 +14,20 @@ class TVCMenu: UITableViewController {
 
     @IBOutlet weak var lblPerfil: UILabel!
     @IBOutlet weak var lblUploadReview: UILabel!
+    @IBOutlet weak var lblconfiguracion: UILabel!
+    @IBOutlet weak var lblAbout: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblPerfil.text = "Prueba"
+        lblPerfil.font = UIFont.fontAwesome(ofSize: 17)
+        lblPerfil.text = String.fontAwesomeIcon(name: .userCircle) + "   Perfil"
         lblUploadReview.font = UIFont.fontAwesome(ofSize: 17)
-        lblUploadReview.text = String.fontAwesomeIcon(name: .upload) + " Subir Review"
+        lblUploadReview.text = String.fontAwesomeIcon(name: .upload) + "   Subir Review"
+        lblconfiguracion.font = UIFont.fontAwesome(ofSize: 17)
+        lblconfiguracion.text = String.fontAwesomeIcon(name: .cog) + "   Configuracion"
+        lblAbout.font = UIFont.fontAwesome(ofSize: 17)
+        lblAbout.text = String.fontAwesomeIcon(name: .coffee) + "   Sobre Nosotros"
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +46,7 @@ class TVCMenu: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 14
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -47,7 +54,10 @@ class TVCMenu: UITableViewController {
         present(storyboard!.instantiateViewController(withIdentifier: "prueba"), animated: true)
         } else if (indexPath.row == 1){
             present(storyboard!.instantiateViewController(withIdentifier: "uploadReview"), animated: true)
-        }else{print("holi")}
+        }else if (indexPath.row == 13){
+            present(storyboard!.instantiateViewController(withIdentifier: "aboutScene"), animated: true)
+        }
+        else{print("holi")}
     }
 
     
