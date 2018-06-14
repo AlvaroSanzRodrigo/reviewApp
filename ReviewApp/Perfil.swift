@@ -21,6 +21,8 @@ class Perfil: NSObject {
     
     var userID:String?
     
+    var userMedia:Float?
+    
     func setMap(valores:[String:Any], user:String){
         
         iEdad = valores["edad"] as? Timestamp
@@ -32,6 +34,8 @@ class Perfil: NSObject {
         userID = user
         
         asReviews = (valores["reviews"] as? [String])!
+        
+        userMedia = valores["Media"] as? Float
 
     }
     
@@ -46,6 +50,8 @@ class Perfil: NSObject {
         mapTemp["gender"] = sGender as Any
         
         mapTemp["reviews"] = asReviews as Any
+        
+        mapTemp["Media"] = userMedia as Any
         
         return mapTemp
         

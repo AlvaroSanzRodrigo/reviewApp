@@ -44,6 +44,7 @@ class VCPerfil: UIViewController {
         txtNombre.text = DataHolder.sharedInstance.myProfile.sNombreUsuario
         txtGenero.text = DataHolder.sharedInstance.myProfile.sGender
         lbNumeroValoraciones.text = String(DataHolder.sharedInstance.myProfile.asReviews.count)
+        lbValoracionMedia.text = String(format: "%.01f", (DataHolder.sharedInstance.myProfile.userMedia)!)
         
 
 
@@ -111,6 +112,12 @@ class VCPerfil: UIViewController {
         
         
         lbValoracionMedia.text = String(format: "%.01f", (Float(aux2)/Float(DataHolder.sharedInstance.myProfile.asReviews.count)))
+        
+       DataHolder.sharedInstance.myProfile.userMedia = (Float(aux2)/Float(DataHolder.sharedInstance.myProfile.asReviews.count))
+        
+        DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document(DataHolder.sharedInstance.myProfile.userID!).setData(DataHolder.sharedInstance.myProfile.getMap(), merge: true)
+        
+        
     }
     
     
