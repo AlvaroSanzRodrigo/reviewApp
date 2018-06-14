@@ -196,6 +196,22 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
         DataHolder.sharedInstance.sCategory = categorias[row]
     }
 
-  
+    @IBAction func btnSubirImagen(_ sender: Any) {
+        let data = Data()
+        
+        // Create a reference to the file you want to upload
+        let reviewRef = DataHolder.sharedInstance.storageRef?.child("reviewImages/imagen.jpg")
+        
+        // Upload the file to the path "images/rivers.jpg"
+        let uploadTask = reviewRef?.putData(data, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            let downloadURL = metadata.downloadURL
+        }
+    }
+    
 
 }
