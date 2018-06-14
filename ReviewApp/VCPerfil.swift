@@ -44,7 +44,7 @@ class VCPerfil: UIViewController {
         txtNombre.text = DataHolder.sharedInstance.myProfile.sNombreUsuario
         txtGenero.text = DataHolder.sharedInstance.myProfile.sGender
         lbNumeroValoraciones.text = String(DataHolder.sharedInstance.myProfile.asReviews.count)
-        lbValoracionMedia.text = String(format: "%.01f", (DataHolder.sharedInstance.myProfile.userMedia)!)
+        lbValoracionMedia.text = "\(DataHolder.sharedInstance.myProfile.userMedia)" //String(format: "%.01f", (DataHolder.sharedInstance.myProfile.userMedia)!)
         
 
 

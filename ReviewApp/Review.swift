@@ -31,7 +31,7 @@ class Review: NSObject {
     var score: Float?
     
     
-    func setMap(valores:[String:Any], user:String){
+    func setMap(valores:[String:Any]){
         
         images = valores["images"] as! [String]
         

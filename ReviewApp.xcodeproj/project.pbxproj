@@ -10,6 +10,8 @@
 		56C9E013748C282EA23BDBD6 /* Pods_ReviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */; };
 		738DEAA220BD533000E1512B /* VCReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DEAA120BD533000E1512B /* VCReview.swift */; };
 		73ACA01420D267E400727920 /* VCPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ACA01320D267E400727920 /* VCPerfil.swift */; };
+		73ACA01620D2D47C00727920 /* TVCMiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ACA01520D2D47C00727920 /* TVCMiCelda1.swift */; };
+		73ACA01820D2D4CC00727920 /* VCPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ACA01720D2D4CC00727920 /* VCPrincipal.swift */; };
 		AA0A629E20C672700046BD59 /* VCsubirReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A629D20C672700046BD59 /* VCsubirReviewViewController.swift */; };
 		AA0A62A020C676830046BD59 /* VCupladReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A629F20C676830046BD59 /* VCupladReview.swift */; };
 		AA775DCA20D029E0007E37A6 /* TVCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA775DC920D029E0007E37A6 /* TVCMenu.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		738DEAA120BD533000E1512B /* VCReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCReview.swift; sourceTree = "<group>"; };
 		73ACA01320D267E400727920 /* VCPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPerfil.swift; sourceTree = "<group>"; };
+		73ACA01520D2D47C00727920 /* TVCMiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCMiCelda1.swift; sourceTree = "<group>"; };
+		73ACA01720D2D4CC00727920 /* VCPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPrincipal.swift; sourceTree = "<group>"; };
 		8DC9DBF0B0D229FBD2A124D9 /* Pods_ReviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0A629D20C672700046BD59 /* VCsubirReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCsubirReviewViewController.swift; sourceTree = "<group>"; };
 		AA0A629F20C676830046BD59 /* VCupladReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCupladReview.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				AAEE841120D129D50049719D /* VCAbout.swift */,
 				AAEE841320D132D10049719D /* VCGitHubAlvaro.swift */,
 				73ACA01320D267E400727920 /* VCPerfil.swift */,
+				73ACA01520D2D47C00727920 /* TVCMiCelda1.swift */,
+				73ACA01720D2D4CC00727920 /* VCPrincipal.swift */,
 			);
 			path = ReviewApp;
 			sourceTree = "<group>";
@@ -283,10 +289,12 @@
 			files = (
 				AA7E9BED20AEBF0000ED1538 /* Perfil.swift in Sources */,
 				AA0A629E20C672700046BD59 /* VCsubirReviewViewController.swift in Sources */,
+				73ACA01620D2D47C00727920 /* TVCMiCelda1.swift in Sources */,
 				AAEC236D20AE303D00A7A569 /* ViewController.swift in Sources */,
 				AA7E9BF120AEC3CE00ED1538 /* VCRegister.swift in Sources */,
 				AAEC237D20AE36E400A7A569 /* DataHolder.swift in Sources */,
 				AAEE841420D132D10049719D /* VCGitHubAlvaro.swift in Sources */,
+				73ACA01820D2D4CC00727920 /* VCPrincipal.swift in Sources */,
 				73ACA01420D267E400727920 /* VCPerfil.swift in Sources */,
 				AA0A62A020C676830046BD59 /* VCupladReview.swift in Sources */,
 				AA7E9BEB20AEBB7D00ED1538 /* VCLogin.swift in Sources */,

@@ -24,6 +24,9 @@ class DataHolder: NSObject {
     
     var myProfile:Perfil = Perfil();
     
+    var reviews:[Review] = []
+    
+    
     func initFireBase() {
         
         FirebaseApp.configure()
@@ -42,8 +45,31 @@ class DataHolder: NSObject {
     var sMarca:String? = ""
     var sDescripcion:String? = ""
     var sCategory:String? = ""
+    var selectedReview:Int = 0
     
     // yay
+    
+    //funcion de descarga de reviews
+    func descargarReviews(delegate: DataHolderDelegate){
+        var allNice = true
+        
+        self.fireStoreDB?.collection("reviews").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                allNice = false
+                print("Error getting documents: \(err)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    let c = Review ()
+                    c.setMap(valores: document.data())
+                    self.reviews.append(c)
+                    print(document.documentID)
+                }
+                delegate.DHDdescargaReviewsComplete!(allnice: allNice)
+            }
+            
+        }
+    }
 
     func regitro(txtFieldEmail:String, txtFieldPssw:String, edad:Timestamp, txtFieldUser:String, gender:String) {
 
@@ -98,4 +124,8 @@ class DataHolder: NSObject {
     
     
 
+}
+
+@objc protocol DataHolderDelegate{
+    @objc optional func DHDdescargaReviewsComplete(allnice: Bool)
 }

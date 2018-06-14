@@ -13,7 +13,18 @@ class VCReview: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControll: UIPageControl!
+    @IBOutlet weak var btnClose: UIButton!
+    var laTrampa:Int?
     
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var txtaPros: UITextView!
+    @IBOutlet weak var txtaCons: UITextView!
+    @IBOutlet weak var txtaDescription: UITextView!
+    
+    
+    @IBAction func btnCloseAction(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     
     var contentWidth:CGFloat = 0.0
@@ -21,7 +32,17 @@ class VCReview: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        laTrampa = DataHolder.sharedInstance.selectedReview
         
+        // Descripcion
+        lblTitle.text = DataHolder.sharedInstance.reviews[laTrampa!].producto! + " " +  DataHolder.sharedInstance.reviews[laTrampa!].marca!
+        for pro in DataHolder.sharedInstance.reviews[laTrampa!].pros {
+            txtaPros.text.append("\n" + pro)
+        }
+        for con in DataHolder.sharedInstance.reviews[laTrampa!].cons {
+            txtaPros.text.append("\n" + con)
+        }
+        txtaDescription.text = DataHolder.sharedInstance.reviews[laTrampa!].descripcion
         scrollView.delegate = self
         
         for image in 0...2 {
