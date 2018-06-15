@@ -20,6 +20,7 @@ class TVCMenu: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //iconos
         lblPerfil.font = UIFont.fontAwesome(ofSize: 17)
         lblPerfil.text = String.fontAwesomeIcon(name: .userCircle) + "   Perfil"
         lblUploadReview.font = UIFont.fontAwesome(ofSize: 17)

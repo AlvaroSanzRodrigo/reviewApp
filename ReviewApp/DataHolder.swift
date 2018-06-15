@@ -72,8 +72,6 @@ class DataHolder: NSObject {
     }
 
     func regitro(txtFieldEmail:String, txtFieldPssw:String, edad:Timestamp, txtFieldUser:String, gender:String) {
-
-        var allNice:Bool = false
         
         Auth.auth().createUser(withEmail: (txtFieldEmail), password: (txtFieldPssw)) { (user, error) in
             
@@ -83,6 +81,7 @@ class DataHolder: NSObject {
                 DataHolder.sharedInstance.myProfile.sNombreUsuario = txtFieldUser
                 DataHolder.sharedInstance.myProfile.sGender = gender
                 DataHolder.sharedInstance.myProfile.userID = user?.additionalUserInfo?.providerID
+                DataHolder.sharedInstance.myProfile.userMedia = 0
                 DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.user.uid)!).setData(DataHolder.sharedInstance.myProfile.getMap()) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
@@ -93,8 +92,6 @@ class DataHolder: NSObject {
                 
                 
                 if user != nil {
-                    
-                    allNice = true
                     
                     let refPerfil = DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document((user?.user.uid)!)
                     refPerfil?.getDocument(completion: { (document, errordoc) in

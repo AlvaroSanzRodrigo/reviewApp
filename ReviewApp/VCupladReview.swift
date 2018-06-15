@@ -32,6 +32,10 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var borrarCon: UIButton!
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var btnMenu: UIButton!
+    @IBOutlet weak var btnImgGaleria: UIButton!
+    let imagePicker = UIImagePickerController()
+    var ImgData:Data?
+    
     @IBAction func btnmenuAccion(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -42,6 +46,8 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var consvisualizer: UITextView!
     
     @IBOutlet weak var pvCategoria: UIPickerView!
+
+    @IBOutlet weak var ImgView: UIImageView!
     
     
     
@@ -106,10 +112,7 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBAction func sldShowScore(_ sender: Any) {
         lblScore.text = String(Int.init(sldScore.value))
     }
-    @IBAction func btnCamaraAccion(_ sender: Any) {
-    }
-    @IBAction func btnGaleriaAccion(_ sender: Any) {
-    }
+
     @IBAction func btnAceptarAccion(_ sender: Any) {
         if (DataHolder.sharedInstance.sProducto.isEmpty) {
             self.view.makeToast("El producto está vacío")
@@ -145,10 +148,12 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
          reviewDBRef?.setData(reviewToUpload.getMap()){ err in
             if let err = err {
                 print("Error writing document: \(err)")
+                self.view.makeToast("Error")
             } else {
                 print("Document successfully written!")
                 DataHolder.sharedInstance.myProfile.asReviews.append((reviewDBRef?.documentID)!)
                 DataHolder.sharedInstance.fireStoreDB?.collection("perfiles").document(self.reviewToUpload.userID!).setData(DataHolder.sharedInstance.myProfile.getMap(), merge: true)
+                self.dismiss(animated: true)
             }
         }
                     }}}}}
@@ -170,8 +175,10 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
         super.viewDidLoad()
         pvCategoria.dataSource = self
         pvCategoria.delegate = self
+        imagePicker.delegate = self
         
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -198,21 +205,25 @@ class VCupladReview: UIViewController, UIImagePickerControllerDelegate, UINaviga
     }
 
     @IBAction func btnSubirImagen(_ sender: Any) {
-        let data = Data()
-        
-        // Create a reference to the file you want to upload
-        let reviewRef = DataHolder.sharedInstance.storageRef?.child("reviewImages/imagen.jpg")
-        
-        // Upload the file to the path "images/rivers.jpg"
-        let uploadTask = reviewRef?.putData(data, metadata: nil) { (metadata, error) in
-            guard let metadata = metadata else {
-                // Uh-oh, an error occurred!
-                return
-            }
-            // Metadata contains file metadata such as size, content-type, and download URL.
-            //let downloadURL = metadata.downloadURL
-        }
-    }
+
     
 
+}
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let img = info[UIImagePickerControllerOriginalImage] as? UIImage
+        print(img,"------------>>>>>>>>>>")
+        ImgView?.image = img
+        self.dismiss(animated: true, completion: nil)
+        ImgData = UIImageJPEGRepresentation(img!, 0.5)! as Data
+    }
+    
+    
+    @IBAction func BtnImgGaleria(){
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
 }

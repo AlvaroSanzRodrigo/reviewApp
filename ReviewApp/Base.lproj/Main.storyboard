@@ -433,7 +433,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGaleriaAccion:" destination="gBE-iu-WqY" eventType="touchUpInside" id="XfN-ze-NO8"/>
+                                    <action selector="BtnImgGaleria" destination="gBE-iu-WqY" eventType="touchUpInside" id="8lv-4B-DhQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uct-K8-IcK">
@@ -456,8 +456,8 @@
                                     <action selector="btnSubirImagen:" destination="gBE-iu-WqY" eventType="touchUpInside" id="tyi-UR-dMd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zt6-UJ-1Ts">
-                                <rect key="frame" x="19" y="372" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltU-fA-l02">
+                                <rect key="frame" x="16" y="356" width="224" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -470,11 +470,13 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="ImgView" destination="ltU-fA-l02" id="vVF-CI-zc0"/>
                         <outlet property="borrarCon" destination="xXV-Id-4uo" id="3go-eX-5El"/>
                         <outlet property="borrarPro" destination="7go-Bu-j5j" id="Mnd-gO-2S1"/>
                         <outlet property="btnCamara" destination="x0x-yP-tRB" id="SP8-O8-y7x"/>
                         <outlet property="btnContras" destination="a4U-Cf-xte" id="HMW-RK-QOv"/>
-                        <outlet property="btnGaleria" destination="Rgh-ST-XHl" id="TOS-vt-LVY"/>
+                        <outlet property="btnGaleria" destination="Rgh-ST-XHl" id="ekn-2F-cXv"/>
+                        <outlet property="btnImgGaleria" destination="Rgh-ST-XHl" id="YCf-wn-tHa"/>
                         <outlet property="btnMenu" destination="uct-K8-IcK" id="K15-5y-PyD"/>
                         <outlet property="btnPros" destination="gTY-uI-EJx" id="hyu-qT-vtS"/>
                         <outlet property="consvisualizer" destination="jNZ-vt-FOk" id="Jqt-oE-p5E"/>

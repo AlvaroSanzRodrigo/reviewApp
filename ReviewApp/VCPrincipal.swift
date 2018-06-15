@@ -40,8 +40,10 @@ class VCPrincipal: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         reviewTable.delegate = self
         reviewTable.dataSource = self
+        self.reviewTable.reloadData()
         //icons
         btnMenu.titleLabel?.font = UIFont.fontAwesome(ofSize: 20)
         btnMenu.setTitle(String.fontAwesomeIcon(name: .bars), for: .normal)
